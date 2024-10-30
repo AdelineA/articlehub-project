@@ -1,0 +1,24 @@
+{
+  "default_branch": "dev",
+  "branches": [
+    "dev",
+    "ft/fetch-articles",
+    "ft/setup-react-router-and-redux",
+    "main",
+    "origin"
+  ],
+  "parent": {
+    "dev": null,
+    "ft/fetch-articles": "dev",
+    "ft/setup-react-router-and-redux": "dev",
+    "main": "dev",
+    "origin": "dev"
+  },
+  "order": [
+    "dev",
+    "ft/fetch-articles",
+    "ft/setup-react-router-and-redux",
+    "main",
+    "origin"
+  ]
+}

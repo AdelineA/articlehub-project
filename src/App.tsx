@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import Articles from "./components/Articles";
 
-const apiUrl =
-  "https://newsapi.org/v2/everything?q=tesla&from=2024-09-30&sortBy=publishedAt&apiKey=9507234ef8664cf0aced8b2b7de9bd5c";
+const apiUrl = import.meta.env.VITE_ARTICLES_API_URL;
 
 const App = () => {
   const [datas, setDatas] = useState([]);
@@ -16,7 +15,7 @@ const App = () => {
   console.log("datas", datas);
 
   return (
-    <div className="px-7 xl:px-20">
+    <div className="p-7 xl:p-20">
       <Articles {...(datas as any)} />
     </div>
   );
