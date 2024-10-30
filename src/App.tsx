@@ -5,13 +5,13 @@ import Home from "./pages";
 import Error from "./pages/Error";
 import Article from "./pages/Article";
 import { Provider } from "react-redux";
-import { homeLoader } from "./loaders/homeLoader";
+import { articlesLoader } from "./loaders/articlesLoader";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
-    loader: homeLoader,
+    loader: articlesLoader,
     errorElement: <Error />,
   },
   {

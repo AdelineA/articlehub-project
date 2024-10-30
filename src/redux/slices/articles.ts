@@ -20,7 +20,7 @@ export const fetchArticlesData = createAsyncThunk(
   }
 );
 
-export const articleSlice = createSlice({
+export const articlesSlice = createSlice({
   name: "article",
   initialState,
   reducers: {},
@@ -39,4 +39,4 @@ export const articleSlice = createSlice({
       });
   },
 });
-export default articleSlice.reducer;
+export default articlesSlice.reducer;
