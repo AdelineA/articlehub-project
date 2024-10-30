@@ -14,9 +14,9 @@ const initialState: ArticleState = {
 export const fetchArticlesData = createAsyncThunk(
   "article/fetchArticleData",
   async () => {
-    const response = await fetch("https://dummyjson.com/posts");
-    const jsonData = await response.json();
-    return jsonData;
+    const response = await fetch(import.meta.env.VITE_API_URL);
+    const { articles } = await response.json();
+    return articles;
   }
 );
 

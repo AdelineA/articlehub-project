@@ -1,11 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { articlesSlice } from "./slices/articles";
-
-const { reducer: articleReducer } = articlesSlice;
+import articlesReducer from "./slices";
 
 export const store = configureStore({
   reducer: {
-    articles: articleReducer,
+    ...articlesReducer,
   },
 });
 export type AppDispatch = typeof store.dispatch;
