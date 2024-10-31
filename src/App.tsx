@@ -6,6 +6,7 @@ import Error from "./pages/Error";
 import Article from "./pages/Article";
 import { Provider } from "react-redux";
 import { articlesLoader } from "./loaders/articles";
+import NavBar from "./components/navBar";
 // import { articleDetailLoader } from "./loaders/articleDetail";
 
 const router = createBrowserRouter([
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <Provider store={store}>
+      <NavBar />
       <RouterProvider router={router} />
     </Provider>
   );

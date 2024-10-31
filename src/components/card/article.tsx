@@ -23,7 +23,7 @@ const ArticleCard = ({
 
       <div className="p-6">
         <h2 className="text-xl font-bold mb-2 text-gray-800">
-          <a href={url} target="_blank" className="hover:underline">
+          <a href={url} target="_blank" className="hover:underline font-serif">
             {title}
           </a>
         </h2>
