@@ -5,7 +5,7 @@ import ArticleCard from "../components/card/article";
 
 const Home = () => {
   const { articles }: any = useLoaderData();
-  console.log(articles);
+
   return (
     <div className="w-full p-10 flex justify-center">
       <Suspense fallback={<Loading />}>
