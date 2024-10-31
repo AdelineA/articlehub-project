@@ -12,13 +12,9 @@ const ArticleCard = ({
   const formattedDate = new Date(publishedAt).toLocaleDateString();
 
   return (
-    <div className="max-w-md border rounded overflow-hidden shadow-lg bg-white">
+    <div className="w-full md:max-w-md border rounded overflow-hidden shadow-lg bg-white">
       <a href={url} target="_blank">
-        <img
-          className="w-full h-48 object-cover"
-          src={urlToImage}
-          alt={title}
-        />
+        <img className="w-full  object-cover" src={urlToImage} alt={title} />
       </a>
 
       <div className="p-6">
