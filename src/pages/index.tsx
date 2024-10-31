@@ -11,7 +11,7 @@ const Home = () => {
       <Suspense fallback={<Loading />}>
         <Await resolve={articles}>
           {(data) => (
-            <div className="justify-center items-center w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
+            <div className="justify-center items-center w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8 md:gap-4">
               {data.map(
                 (article: any, index: number) =>
                   article.title !== "[Removed]" && (
