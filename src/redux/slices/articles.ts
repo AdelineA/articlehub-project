@@ -1,15 +1,5 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-
-type ArticleState = {
-  articles: any;
-  loading: boolean;
-  error?: string | null;
-};
-const initialState: ArticleState = {
-  articles: null,
-  loading: false,
-  error: null,
-};
+import { createAsyncThunk } from "@reduxjs/toolkit";
+import { slice } from "../slice";
 
 export const fetchArticlesData = createAsyncThunk(
   "article/fetchArticleData",
@@ -20,23 +10,4 @@ export const fetchArticlesData = createAsyncThunk(
   }
 );
 
-export const articlesSlice = createSlice({
-  name: "article",
-  initialState,
-  reducers: {},
-  extraReducers: (builder) => {
-    builder
-      .addCase(fetchArticlesData.pending, (state) => {
-        state.loading = true;
-      })
-      .addCase(fetchArticlesData.fulfilled, (state, action) => {
-        state.loading = false;
-        state.articles = action.payload;
-      })
-      .addCase(fetchArticlesData.rejected, (state, action) => {
-        state.loading = false;
-        state.error = action.error.message;
-      });
-  },
-});
-export default articlesSlice.reducer;
+export default slice("article", fetchArticlesData).reducer;
