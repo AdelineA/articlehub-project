@@ -6,7 +6,7 @@ import Error from "./pages/Error";
 import Article from "./pages/Article";
 import { Provider } from "react-redux";
 import { articlesLoader } from "./loaders/articles";
-import { articleDetailLoader } from "./loaders/articleDetail";
+// import { articleDetailLoader } from "./loaders/articleDetail";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
   {
     path: "articles/:articleId",
     element: <Article />,
-    loader: articleDetailLoader,
+    // loader: articleDetailLoader,
   },
 ]);
 function App() {

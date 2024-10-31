@@ -4,7 +4,7 @@ import Loading from "../components/UI/Loading";
 
 const ArticlePage = () => {
   const { article } = useLoaderData() as any;
-  console.log(article);
+
   return (
     <div className="w-full p-10 mx-auto">
       <Suspense fallback={<Loading />}>
